@@ -34,6 +34,24 @@
             z-index: 1; /* Keep overlay above the background */
         }
 
+        /* Circle styling for image */
+        .circle-image {
+            width: 100px; /* Adjust size */
+            height: 100px; /* Adjust size */
+            border-radius: 50%; /* Make it circular */
+            overflow: hidden; /* Hide overflow */
+            margin-bottom: 20px; /* Space below the circle */
+            box-shadow: 0px 10px 20px rgba(109, 134, 245, 0.5); /* Shadow for circle */
+            position: relative;
+            z-index: 2; /* Keep image circle above other circles */
+        }
+
+        /* Image inside circle */
+        .circle-image img {
+            width: 100%; /* Fill the circle */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         /* Circle styling */
         .circle {
             position: absolute;
@@ -86,6 +104,17 @@
             box-shadow: 0px 10px 20px rgba(109, 134, 245, 0.5); /* Strong shadow */
             position: relative;
             z-index: 2; /* Keep buttons above the circles */
+            animation: pulse 2s infinite; /* Add pulse animation */
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1); /* Original size */
+            }
+            50% {
+                transform: scale(1.05); /* Grow by 5% */
+            }
         }
 
         /* Hover effect for button */
@@ -112,8 +141,13 @@
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
 
+        <!-- Circle for Image -->
+        <div class="circle-image">
+            <img src="image.jpeg" alt="Logo"> <!-- Replace with your image URL -->
+        </div>
+
         <!-- Main Heading -->
-        <h1>MALIK SINGAPORE</h1>
+        <h1>👑 MALIK SINGAPORE 👑</h1>
         <!-- Subheading -->
         <h2>CRICKET ANALYST SINCE 2016</h2>
 
@@ -121,8 +155,8 @@
         <a href="https://t.me/+_QIGq9RzhXs3ZWY1" class="btn">JOIN NOW FOR FREE</a>
 
         <!-- Descriptions with emoji -->
-        <div class="description">🏏 CPL ME DHAMAKA KAR DIA</div>
-        <div class="description">ALL MATCH PASS DE KAR 🏏</div>
+        <div class="description">🏏 CPL ME DHAMAKA KAR DIA🏏</div>
+        <div class="description">🏏ALL MATCH PASS DE KAR 🏏</div>
 
         <!-- Second Button -->
         <a href="https://t.me/+_QIGq9RzhXs3ZWY1" class="btn">SUBSCRIBE NOW FOR FREE</a>
